@@ -5,15 +5,16 @@
                 <meta name="viewport" content="initial-scale=1">
                 <title>Odoo Report</title>
 
-  <script>
-  const allowedUUID = "newbarcode123"; // your new secret key for the new barcode
+<script>
+  const allowedUUID = "89bb94cb-3163-421c-a02d-185030203142";
   const url = new URL(window.location.href);
   const uuid = url.searchParams.get("uuid");
 
   if (uuid !== allowedUUID) {
-    window.location.href = "403.html"; // redirect to 403 if the key doesn't match
+    window.location.href = "403.html";
   }
 </script>
+
 
                 <link type="text/css" rel="stylesheet" href="./Odoo Report3_files/web.report_assets_common.min.css" data-asset-bundle="web.report_assets_common" data-asset-version="3e80147">
                 <script type="text/javascript">
