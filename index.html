@@ -11,7 +11,18 @@
                 </script>
                 <script type="text/javascript" src="./Odoo Report_files/web.assets_common.min.js.download" data-asset-bundle="web.assets_common" data-asset-version="f87aa4d"></script>
                 <script type="text/javascript" src="./Odoo Report_files/web.report_assets_common.min.js.download" data-asset-bundle="web.report_assets_common" data-asset-version="3e80147"></script>
-        </head>
+<script>
+  const allowedKey = "onlyfrombarcode123"; // your secret key from QR code
+  const url = new URL(window.location.href);
+  const accessKey = url.searchParams.get("key");
+
+  if (accessKey !== allowedKey) {
+    window.location.href = "403.html"; // show error if key not matched
+  }
+</script>
+        
+
+</head>
             <body class="container">
                 <div id="wrapwrap">
                     <main>
